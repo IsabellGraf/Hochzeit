@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="test/html; charset=UTF-8" />
+
+<title> Bernhard's and Isabell's wedding </title>
+
+<style type="text/css">
+
+body{
+  font-family:"Comic Sans MS",cursive, sans-serif;
+  margin-top: 0.5cm;
+}
+
+#map-canvas{
+	width: 500px;
+	height: 400px;
+	background-color: #CCC;
+}
+
+</style>
+</head>
+
+
+
+<body bgcolor="FFFFFF" text="#9F0517 ">
+<div style="position:relative; right:-70%">  
+    <a href="hallburg.html"><img src="bilder/deutsch.jpg" width=47 /></a> &nbsp;&nbsp;&nbsp;
+    <a href="index_engl.html">back</a> 
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+
+
+<br>
+<br>
+<br>
+
+
+<!-- <hr width="80%"> -->
+<div  align="center"> &#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049; </div>
+
+</br> <br>
+
+<div style = "padding-left:12%;padding-right:12%">
+
+<table>
+<col width="45%" />
+<col width="5%" />
+<col width="45%" />
+    <tr>
+      <td> 
+        <img src="bilder/hallburg.JPG" width=500 />
+      </td>
+      <td>
+      </td>
+      <td>
+        Schloss Hallburg <br>
+        97332 Volkach
+
+<!--
+        <br><br>
+        <a href="https://www.google.de/maps/place/Schloss+Hallburg/@49.850904,10.211872,17z/data=!3m1!4b1!4m2!3m1!1s0x47a261b63aa7f0b7:0x7558c156943c133f" target="blank"><font color="9F0517">google maps</font></a>
+-->
+      </td>
+    </tr>
+</table>
+
+<br><br>
+<div align="center">
+<div id="map-canvas"></div>
+</div>
+<br><br>
+
+</div>
+
+<!-- <hr width="80%"> -->
+<div align="center"> &#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049; </div>
+
+<br> <br> <br> <br>
+
+</body>
+</html>
+
+<script>
+var directionsDisplay,
+    directionsService,
+    map;
+
+function initialize() {
+  var directionsService = new google.maps.DirectionsService();
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var hallburg = new google.maps.LatLng(49.851084, 10.211904);
+  var mapOptions = { zoom:13, mapTypeId: google.maps.MapTypeId.ROADMAP, center: hallburg }
+  map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  
+  var marker = new google.maps.Marker({
+    position: hallburg,
+    map: map });
+  directionsDisplay.setMap(map);
+}
+</script>
